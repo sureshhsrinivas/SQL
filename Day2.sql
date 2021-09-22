@@ -21,11 +21,17 @@ UPDATE student SET marks=100 WHERE name='teju';
 
 delete from department where dept_id=5;
 
+drop table department;
+
 ---------------------------------------------------------
 
 alter table student add results varchar(20);
 
 alter table student drop results;
+
+alter table student modify results int;
+
+alter table student modify results varchar(20);
 
 ----------------------------------------------------------
 
@@ -63,3 +69,7 @@ select * from sales s inner join order_sales p on s.address=p.address;
 
 select * from sales s left join order_sales p on s.address=p.address;
 select * from sales s right join order_sales p on s.address=p.address;
+
+delete from sales where salesid=1;
+
+select distinct  salesname, id, productName from sales s , order_sales o where s.salesid= o.salesid and s.salesname= 'Airtel';
