@@ -51,3 +51,4 @@ select *from student where marks>=90 and marks<=100;
 
 select *from student where marks>85 and marks<95;
 
+select dept_name from department;
