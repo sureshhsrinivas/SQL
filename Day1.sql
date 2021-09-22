@@ -25,7 +25,15 @@ insert into student values(1,'suresh',90,2),(2,'teju',95,1),(3,'loki',96,3)(4,'S
 select * from student;
 select * from department;
 
-select *from student order by id DESC;
+select * from student order by id asc;
+
+select *from student order by id desc;
+
+select * from student where id>3 order by id desc;
+
+select count(*) from student;
+
+select count(*) as total from student;
 
 select *from student where id<6 LIMIT 1,2;
 
